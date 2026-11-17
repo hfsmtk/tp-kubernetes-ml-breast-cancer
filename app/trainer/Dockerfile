@@ -1,0 +1,9 @@
+FROM python:3.11-slim
+
+WORKDIR /app
+COPY requirements.txt .
+RUN pip install --timeout 300 --retries 10 -r requirements.txt
+COPY train.py .
+
+# Un Job exécute une tâche puis s'arrête : pas de port, pas de serveur
+CMD ["python", "train.py"]

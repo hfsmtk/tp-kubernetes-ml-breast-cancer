@@ -1,0 +1,30 @@
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+
+# Environnement et identifiants
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Secrets Kubernetes
+k8s/01-secrets.yaml
+k8s/*secret*backup*.yaml
+
+# Sauvegardes
+sauvegarde-partieB/
+sauvegarde-modeles-v1/
+k8s/*backup*.yaml
+k8s/*avant-liveness*.yaml
+k8s/*probes-ok*.yaml
+
+# Fichiers temporaires
+*.log
+.DS_Store
+Thumbs.db
